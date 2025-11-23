@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dark { background-color: #1a1a1a; color: white; }
+        .dark .profile-section, .dark .videos-section { background-color: #333; border-color: #555; }
+        .transition-all { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+    <header class="bg-blue-500 text-white p-4 text-center shadow-md">
+        <h1 class="text-2xl font-bold">User Profile</h1>
+        <a href="main.html" class="absolute top-4 left-4 text-white hover:underline">Back to Feed</a>
+        <button id="theme-toggle" class="absolute top-4 right-4 text-2xl">🌙</button>
+    </header>
+    <section id="profile-info" class="profile-section p-4 max-w-2xl mx-auto bg-white rounded-lg shadow-md mb-4">
+        <h2 class="text-xl font-semibold mb-4">Profile Information</h2>
+        <div class="mb-2">
+            <label class="block text-gray-700 font-medium">Name:</label>
+            <p id="user-name" class="text-gray-900">Loading...</p>
+        </div>
+        <div class="mb-2">
+            <label class="block text-gray-700 font-medium">Date of Birth:</label>
+            <p id="user-dob" class="text-gray-900">Loading...</p>
+        </div>
+        <div class="mb-2">
+            <label class="block text-gray-700 font-medium">Email:</label>
+            <p id="user-email" class="text-gray-900">Loading...</p>
+        </div>
+    </section>
+    <section id="videos-section" class="videos-section p-4 max-w-2xl mx-auto bg-white rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">My Videos</h2>
+        <div id="videos-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+        <p id="no-videos" class="text-gray-500 mt-4 hidden">No videos uploaded yet.</p>
+    </section>
+    <script src="profile.js"></script>
+</body>
+</html>

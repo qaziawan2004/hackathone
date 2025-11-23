@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixstagram</title>
+    <link rel="stylesheet"  href="output.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+</head>
+
+<body class="bg-gray-100 min-h-screen font-sans">
+
+<header id="header" class="bg-blue-500 text-white p-4 text-center fixed top-0 left-0 w-full shadow-md z-50 flex justify-between items-center gap-4">
+    <img src="Assets/Images/—Pngtree—letter p logo png design_6824594.png" alt="logo" class="w-13 h-13 ">
+       <a href="profile.html" class="flex items-center gap-2" onClick="profile()">
+            <img id="header-profile" src="https://via.placeholder.com/40" 
+                 class="w-10 h-10 rounded-full border-2 border-white">
+            <span class="hidden sm:inline-block font-semibold" id="header-username">User</span>
+        </a>
+    <h1 class="text-xl sm:text-2xl font-bold leading-tight px-10">
+        <span class="text-pink-800">Life</span> in pixels, 
+        <span class="text-pink-800">emotions</span> in 
+        <span class="text-pink-800">frames</span>
+    </h1>
+
+    <div class="flex items-center gap-4">
+     
+
+        <button id="theme-toggle" class="text-2xl hover:scale-110 transition-transform">🌙</button>
+
+        
+        <button onClick="logOut()" class="w-8 h-8 text-white">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+</header>
+
+
+    <div class="pt-28 px-2 sm:px-4">
+
+        <section id="post-section" 
+            class="p-4 max-w-2xl mx-auto bg-white rounded-lg shadow-md mb-4">
+            
+            <textarea id="post-text"
+
+                class="w-full p-3 border border-gray-300 rounded-lg mb-3 
+                       focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                placeholder="What's on your mind?" 
+                rows="3"></textarea>
+
+            <input id="post-image" type="url" 
+                class="w-full p-3 border border-gray-300 rounded-lg mb-3 
+                       focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                placeholder="Image URL (optional)">
+
+            <button id="post-btn" 
+                class="bg-blue-500 text-white px-6 py-2 rounded-lg 
+                       hover:bg-blue-600 w-full sm:w-auto transition-colors font-semibold">
+                Post
+            </button>
+        </section>
+
+        <section id="controls" 
+            class="p-4 max-w-2xl mx-auto bg-white rounded-lg shadow-md mb-4 
+                   flex flex-col sm:flex-row gap-3">
+            
+            <input id="search" 
+                type="text" 
+                class="w-full p-3 border border-gray-300 rounded-lg 
+                       focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                placeholder="Search posts...">
+
+            <select id="sort" 
+                class="p-3 border border-gray-300 rounded-lg 
+                       focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-44">
+                <option>Latest First</option>
+                <option>Oldest First</option>
+                <option>Most Liked</option>
+            </select>
+        </section>
+
+        <section id="feed" 
+            class="p-2 sm:p-4 max-w-2xl mx-auto space-y-4"></section>
+
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

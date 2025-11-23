@@ -182,58 +182,58 @@ function openEdit(id) {
 }
 
 
-searchInput.addEventListener("input", renderPosts);
-sortSelect.addEventListener("change", renderPosts);
+// searchInput.addEventListener("input", renderPosts);
+// sortSelect.addEventListener("change", renderPosts);
 
 
 
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("bg-gray-900");
-    document.body.classList.toggle("text-white");
+// themeToggle.addEventListener("click", () => {
+//     document.body.classList.toggle("bg-gray-900");
+//     document.body.classList.toggle("text-white");
 
-    themeToggle.textContent =
-        themeToggle.textContent === "🌙" ? "☀️" : "🌙";
-});
-function logOut() {
-    window.location.href = "index.html"
-}
-function profile() {
-    window.location.href = "profile.html"
-}
-// On page load: Check for user and load profile data
-window.onload = () => {
-    // Retrieve user from localStorage
-    const user = JSON.parse(localStorage.getItem('user'));
-    if (!user) {
-        // Redirect to login if no user
-        window.location.href = 'index.html';
-        return;
-    }
+//     themeToggle.textContent =
+//         themeToggle.textContent === "🌙" ? "☀️" : "🌙";
+// });
+// function logOut() {
+//     window.location.href = "index.html"
+// }
+// function profile() {
+//     window.location.href = "profile.html"
+// }
+// // On page load: Check for user and load profile data
+// window.onload = () => {
+//     // Retrieve user from localStorage
+//     const user = JSON.parse(localStorage.getItem('user'));
+//     if (!user) {
+//         // Redirect to login if no user
+//         window.location.href = 'index.html';
+//         return;
+//     }
     
-    // Display user details
-    document.getElementById('user-name').textContent = user.name || 'N/A';
-    document.getElementById('user-dob').textContent = user.dob || 'N/A';
-    document.getElementById('user-email').textContent = user.email || 'N/A';
+//     // Display user details
+//     document.getElementById('user-name').textContent = user.name || 'N/A';
+//     document.getElementById('user-dob').textContent = user.dob || 'N/A';
+//     document.getElementById('user-email').textContent = user.email || 'N/A';
     
-    // Load and display videos
-    const videos = JSON.parse(localStorage.getItem('videos')) || [];
-    const videosList = document.getElementById('videos-list');
-    const noVideos = document.getElementById('no-videos');
+//     // Load and display videos
+//     const videos = JSON.parse(localStorage.getItem('videos')) || [];
+//     const videosList = document.getElementById('videos-list');
+//     const noVideos = document.getElementById('no-videos');
     
-    if (videos.length === 0) {
-        noVideos.classList.remove('hidden');
-    } else {
-        videos.forEach(url => {
-            const videoDiv = document.createElement('div');
-            videoDiv.innerHTML = `<video controls class="w-full rounded"><source src="${url}" type="video/mp4">Your browser does not support the video tag.</video>`;
-            videosList.appendChild(videoDiv);
-        });
-    }
+//     if (videos.length === 0) {
+//         noVideos.classList.remove('hidden');
+//     } else {
+//         videos.forEach(url => {
+//             const videoDiv = document.createElement('div');
+//             videoDiv.innerHTML = `<video controls class="w-full rounded"><source src="${url}" type="video/mp4">Your browser does not support the video tag.</video>`;
+//             videosList.appendChild(videoDiv);
+//         });
+//     }
     
-    // Theme toggle functionality
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-        const btn = document.getElementById('theme-toggle');
-        btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-    });
-};
+//     // Theme toggle functionality
+//     document.getElementById('theme-toggle').addEventListener('click', () => {
+//         document.body.classList.toggle('dark');
+//         const btn = document.getElementById('theme-toggle');
+//         btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+//     });
+// };
